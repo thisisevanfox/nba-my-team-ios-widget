@@ -46,7 +46,7 @@ You want to have more information on the releases? Check the [changelog](https:/
 Having troubles with installing? Check the detailed installation guide [here](https://github.com/thisisevanfox/nba-my-team-ios-widget/blob/main/Installation%20guide.md). 
    
 ## Register for updates 📥
-Don't want to miss a update for this widget? Just head over to [this](https://forms.gle/4SBmYLcVgzFak7SZ9) GoogleForm, type your email address and I'll send you an email when a new update is released.
+Don't want to miss a update for this widget? Just head over to [this](https://forms.gle/6tcB5juGenEaZHqL7) GoogleForm, type your email address and I'll send you an email when a new update is released.
    
 ## Frequently Asked Questions (FAQs) ❓
 All Frequently Asked Question are collected [here](https://github.com/thisisevanfox/nba-my-team-ios-widget/blob/main/FAQ.md).
