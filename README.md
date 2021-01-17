@@ -11,6 +11,7 @@ I created a widget for iOS and the [Scriptable.app](https://scriptable.app/) to 
 5. [Support the project 💪 / Buy me a coffee ☕](https://github.com/thisisevanfox/nba-my-team-ios-widget#support-the-project---buy-me-a-coffee-)
 6. [Bugs](https://github.com/thisisevanfox/nba-my-team-ios-widget#bugs-) 🐞
 7. [References](https://github.com/thisisevanfox/nba-my-team-ios-widget#references-) 🏆
+8. [Disclaimer](https://github.com/thisisevanfox/nba-my-team-ios-widget#disclaimer)
 
 ## Features 💡      
 <p align="center">
@@ -65,3 +66,6 @@ Found a bug? Feel free to create a issue.
 
 ## References 🏆
 I used the publicly accessible NBA api which is documented by [kashav](https://github.com/kashav/nba.js/blob/master/docs/api/DATA.md). The logos are taken from [thesportsdb.com](https://thesportsdb.com). 
+
+## Disclaimer
+This is a project developed by myself. It is not an official widget of the NBA. I have no relationship with the NBA.
