@@ -29,7 +29,7 @@ Make sure you copy it until the following lines are marked:
 ### no-background doesn't work
 1. Make sure no-background.js is installed properly: Just copy [this](https://raw.githubusercontent.com/supermamon/scriptable-no-background/master/no-background.js) as a seperate script "no-background".
 
-2. After that, make sure you changed the following line in the NHL script from
+2. After that, make sure you changed the following line in the NBA script from
 ```
 const NO_BACKGROUND_INSTALLED = false;
 ```
