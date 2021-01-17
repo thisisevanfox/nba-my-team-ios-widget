@@ -5,7 +5,7 @@ Small (2x2) and medium (4x2) sized widgets are supported. Some features are not 
 * Shows date and time of next game (local timezone) (Small + Medium)
 * Shows city where the next game takes place (Small + Medium)
 * Show live score of next game. "Live" depends on how often the widget on the homescreen updates itself. It is not possible to say exactly, when it updates. (Medium)
-* Shows stats of both teams (wins, losses, overtime losses) (Small + Medium) 
+* Shows stats of both teams (wins, losses) (Small + Medium) 
 * Shows standings of both teams (Small + Medium)
 * Shows top scorer of your team and the opponent (Small + Medium)
 * Shows next 4 games with date (Medium)
