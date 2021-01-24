@@ -36,11 +36,16 @@ Note: I don't know how the api displays the games when it comes to playoffs. I'l
 You want to have more information on the releases? Check the [changelog](https://github.com/thisisevanfox/nba-my-team-ios-widget/blob/main/Changelog.md).
 
 ## Getting started with the widget 🚀
-1. Download Scriptable from the AppStore. Click [here](https://apps.apple.com/us/app/scriptable/id1405459188?uo=4) to get to AppStore.
-2. Click the "+"-Icon in the Scriptable-app.
-3. Copy all the text from the NBA-MyTeam-Widget.js-file. Click [here](https://raw.githubusercontent.com/thisisevanfox/nba-my-team-ios-widget/main/NBA-MyTeam-Widget.js) to get to the file.
-4. Step through the user settings in the script.
-5. Add a Scriptable-widget to your homescreen.
+There are 2 options to install this widget. For both options, make sure to download Scriptable from the AppStore before starting with the installation of the widget. Click [here](https://apps.apple.com/us/app/scriptable/id1405459188?uo=4) to get to AppStore.
+
+### 1. Install with ScriptDude
+[![Download with ScriptDude](https://scriptdu.de/download.svg)](https://scriptdu.de/?name=NBA%20MyTeam&source=https://raw.githubusercontent.com/thisisevanfox/nba-my-team-ios-widget/main/NBA-MyTeam-Widget.js&docs=https://github.com/thisisevanfox/nba-my-team-ios-widget#generator)
+
+### 2. Manual Installation
+1. Click the "+"-Icon in the Scriptable-app.
+2. Copy all the text from the NBA-MyTeam-Widget.js-file. Click [here](https://raw.githubusercontent.com/thisisevanfox/nba-my-team-ios-widget/main/NBA-MyTeam-Widget.js) to get to the file.
+3. Step through the user settings in the script.
+4. Add a Scriptable-widget to your homescreen.
    * Add it with size "medium".
    * Make sure to choose "Run script" for "When Interacting".
 
