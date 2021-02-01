@@ -1,4 +1,12 @@
 # Changelog
+## v1.1.0
+### New features:
+- Added new setting SHOW_HOME_TEAM_FIRST. As u/TwentyFour7 on reddit explained to me that in the US the syntax for a game always is "away team @ home team" I introduced this setting. As I live in Europe, where the home team always is mentioned first, the setting is default to the european way, so you have to set it to false if you want the US layout.
+
+### Bugfixes:
+- Fixed display of time in small widget. Widget won't crash if something goes wrong.
+- Date is now displayed with two digits.
+
 ## v1  
 Small (2x2) and medium (4x2) sized widgets are supported. Some features are not available in the small widget. I have written in the brackets after the features in which variant it is available.
                                                      
