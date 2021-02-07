@@ -1,4 +1,8 @@
 # Changelog
+## v1.2.0
+### New features:
+- Added new setting CACHING_ACTIVE. For a few users of the widget, sometimes the message "Script not found" appeared. This was due to the caching of the logos and insufficient memory on the users' devices. If you get this error, set the new setting CACHING_ACTIVE from true to false.
+
 ## v1.1.0
 ### New features:
 - Added new setting SHOW_HOME_TEAM_FIRST. As u/TwentyFour7 on reddit explained to me that in the US the syntax for a game always is "away team @ home team" I introduced this setting. As I live in Europe, where the home team always is mentioned first, the setting is default to the european way, so you have to set it to false if you want the US layout.
