@@ -4,12 +4,12 @@
 
 /********************************************************
  * script     : NBA-MyTeam-Widget.js
- * version    : 1.1.0
+ * version    : 1.2.0
  * description: Widget for Scriptable.app, which shows
  *              the next games for your NBA team
  * author     : @thisisevanfox
  * support    : https://git.io/JtLOD
- * date       : 2021-02-01
+ * date       : 2021-02-07
  *******************************************************/
 
 /********************************************************
@@ -61,6 +61,10 @@ const WIDGET_URL = "http://nba.com";
 // true = Widget will be in dark mode.
 // false = Widget will be in light mode.
 const DARK_MODE = Device.isUsingDarkAppearance();
+
+// Indicator if caching of logos is actived (saves datavolume)
+// Default: true
+const CACHING_ACTIVE = true;
 
 // Indicator if no-background.js is installed
 // Default: false
@@ -891,37 +895,41 @@ function calculateScore(aPeriodScores) {
  * @return {Object}
  */
 async function loadLogo(sImageUrl, sTeamAbbreviation) {
-  // Set up the file manager.
-  const oFiles = FileManager.local();
-
-  // Set up cache
-  const sCachePath = oFiles.joinPath(
-    oFiles.cacheDirectory(),
-    sTeamAbbreviation + "_NBA"
-  );
-  const bCacheExists = oFiles.fileExists(sCachePath);
-
   let oResult;
-  try {
-    if (bCacheExists) {
-      oResult = oFiles.readImage(sCachePath);
-    } else {
-      const oRequest = new Request(sImageUrl);
-      oResult = await oRequest.loadImage();
-      try {
-        oFiles.writeImage(sCachePath, oResult);
-        console.log("Created cache entry for logo of " + sTeamAbbreviation);
-      } catch (e) {
-        console.log(e);
+  if (CACHING_ACTIVE) {
+    // Set up the file manager.
+    const oFiles = FileManager.local();
+
+    // Set up cache
+    const sCachePath = oFiles.joinPath(
+      oFiles.cacheDirectory(),
+      sTeamAbbreviation + "_NBA"
+    );
+    const bCacheExists = oFiles.fileExists(sCachePath);
+    try {
+      if (bCacheExists) {
+        oResult = oFiles.readImage(sCachePath);
+      } else {
+        const oRequest = new Request(sImageUrl);
+        oResult = await oRequest.loadImage();
+        try {
+          oFiles.writeImage(sCachePath, oResult);
+          console.log("Created cache entry for logo of " + sTeamAbbreviation);
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    } catch (oError) {
+      console.error(oError);
+      if (bCacheExists) {
+        oResult = oFiles.readImage(sCachePath);
+      } else {
+        console.log("Fetching logo for " + sTeamAbbreviation + " failed.");
       }
     }
-  } catch (oError) {
-    console.error(oError);
-    if (bCacheExists) {
-      oResult = oFiles.readImage(sCachePath);
-    } else {
-      console.log("Fetching logo for " + sTeamAbbreviation + " failed.");
-    }
+  } else {
+    const oRequest = new Request(sImageUrl);
+    oResult = await oRequest.loadImage();
   }
 
   return oResult;
