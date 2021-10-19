@@ -4,12 +4,12 @@
 
 /********************************************************
  * script     : NBA-MyTeam-Widget.js
- * version    : 1.2.0
+ * version    : 1.3.0
  * description: Widget for Scriptable.app, which shows
  *              the next games for your NBA team
  * author     : @thisisevanfox
  * support    : https://git.io/JtLOD
- * date       : 2021-02-07
+ * date       : 2021-10-19
  *******************************************************/
 
 /********************************************************
@@ -43,14 +43,15 @@ const SHOW_STATS_AND_STANDINGS = true;
 // Indicator if the home team should show first (like it's common in Europe)
 // Default: true (home team shows first, e.g. "home - away")
 // false (away team shows first, e.g. "away @ home")
-const SHOW_HOME_TEAM_FIRST = true;
+const SHOW_HOME_TEAM_FIRST = false;
 
 // Start year of current season
-// For season 2020-21, the value must be "2020"
+											   
 // For season 2021-22, the value must be "2021"
-const CURRENT_SEASON_START_YEAR = "2020";
+// For season 2022-23, the value must be "2022"
+const CURRENT_SEASON_START_YEAR = "2021";
 
-// URL to shares app
+// URL to nba app
 // Default: "http://nba.com"
 // If you don't want anything to open, type:
 // const WIDGET_URL = "";
@@ -827,16 +828,17 @@ async function fetchTopScorer(oTeamData, aAllPlayers) {
     name: null,
     value: "",
   };
-  if (oTopScorers) {
-    const oTopScorer = oTopScorers.league.standard.ppg[0];
-    const sPlayerId = oTopScorer.personId;
-    const oPlayer = aAllPlayers.filter(
-      (player) => player.personId == sPlayerId
-    )[0];
-
-    oResult.name = `${oPlayer.firstName} ${oPlayer.lastName}`;
-    oResult.value = oTopScorer.value;
-  }
+//   if (oTopScorers) {
+//     console.log(oTopScorers)
+//     const oTopScorer = oTopScorers.league.standard.ppg[0];
+//     const sPlayerId = oTopScorer.personId;
+//     const oPlayer = aAllPlayers.filter(
+//       (player) => player.personId == sPlayerId
+//     )[0];
+// 
+//     oResult.name = `${oPlayer.firstName} ${oPlayer.lastName}`;
+//     oResult.value = oTopScorer.value;
+//   }
 
   return oResult;
 }
