@@ -1,4 +1,11 @@
-# Changelog
+# Changelog 
+## v1.3.0
+### New features:
+- Updated start year 2021 to show data for upcoming season
+
+### Bugfixes:
+- Removed top scorers as api changed. Top scorers will return in future releases.
+
 ## v1.2.0
 ### New features:
 - Added new setting CACHING_ACTIVE. For a few users of the widget, sometimes the message "Script not found" appeared. This was due to the caching of the logos and insufficient memory on the users' devices. If you get this error, set the new setting CACHING_ACTIVE from true to false.
