@@ -4,12 +4,12 @@
 
 /********************************************************
  * script     : NBA-MyTeam-Widget.js
- * version    : 1.3.0
+ * version    : 1.4.0
  * description: Widget for Scriptable.app, which shows
  *              the next games for your NBA team
  * author     : @thisisevanfox
  * support    : https://git.io/JtLOD
- * date       : 2021-10-19
+ * date       : 2022-10-27
  *******************************************************/
 
 /********************************************************
@@ -47,9 +47,9 @@ const SHOW_HOME_TEAM_FIRST = false;
 
 // Start year of current season
 											   
-// For season 2021-22, the value must be "2021"
 // For season 2022-23, the value must be "2022"
-const CURRENT_SEASON_START_YEAR = "2021";
+// For season 2023-24, the value must be "2023"
+const CURRENT_SEASON_START_YEAR = "2022";
 
 // URL to nba app
 // Default: "http://nba.com"
