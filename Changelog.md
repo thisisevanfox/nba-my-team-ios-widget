@@ -1,4 +1,8 @@
 # Changelog 
+## v1.4.0
+### New features:
+- Updated start year 2022 to show data for upcoming season
+
 ## v1.3.0
 ### New features:
 - Updated start year 2021 to show data for upcoming season
