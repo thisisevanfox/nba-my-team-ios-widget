@@ -1,4 +1,9 @@
 # Changelog 
+## v1.5.0
+### Bugfixes:
+- Fixed api for standings
+- Fixed api for top scorers
+
 ## v1.4.0
 ### New features:
 - Updated start year 2022 to show data for upcoming season
