@@ -1,4 +1,8 @@
 # Changelog 
+## v1.6.0
+### New features:
+- Updated start year 2023 to show data for upcoming season
+
 ## v1.5.0
 ### Bugfixes:
 - Fixed api for standings
