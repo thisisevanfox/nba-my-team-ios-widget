@@ -1,5 +1,5 @@
 # Changelog 
-## v1.6.0
+## v1.7.0
 ### Bugfixes:
 - Fixed shortName of PHI used for teamCode
 
