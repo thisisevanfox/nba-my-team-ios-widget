@@ -4,12 +4,12 @@
 
 /********************************************************
  * script     : NBA-MyTeam-Widget.js
- * version    : 1.6.0
+ * version    : 1.7.0
  * description: Widget for Scriptable.app, which shows
  *              the next games for your NBA team
  * author     : @thisisevanfox
  * support    : https://git.io/JtLOD
- * date       : 2023-10-13
+ * date       : 2023-11-19
  *******************************************************/
 
 /********************************************************
@@ -1187,7 +1187,7 @@ function getTeamData() {
             abbreviation: "PHI",
             teamName: "Philadelphia 76ers",
             simpleName: "76ers",
-            shortName: "sixers",
+            shortName: "76ers",
             location: "Philadelphia",
             logo:
             "https://www.thesportsdb.com/images/media/team/badge/71545f1518464849.png/preview",
