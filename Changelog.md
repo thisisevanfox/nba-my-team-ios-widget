@@ -1,4 +1,8 @@
 # Changelog 
+## v1.7.0
+### Bugfixes:
+- Fixed shortName of PHI used for teamCode
+
 ## v1.6.0
 ### New features:
 - Updated start year 2023 to show data for upcoming season
