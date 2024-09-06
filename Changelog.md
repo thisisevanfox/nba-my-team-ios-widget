@@ -1,4 +1,8 @@
 # Changelog 
+## v1.8.0
+### Adjustments:
+- Prepared script for new season
+
 ## v1.7.0
 ### Bugfixes:
 - Fixed shortName of PHI used for teamCode
