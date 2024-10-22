@@ -4,12 +4,12 @@
 
 /********************************************************
  * script     : NBA-MyTeam-Widget.js
- * version    : 1.8.0
+ * version    : 1.8.1
  * description: Widget for Scriptable.app, which shows
  *              the next games for your NBA team
  * author     : @thisisevanfox
  * support    : https://git.io/JtLOD
- * date       : 2024-09-06
+ * date       : 2024-10-22
  *******************************************************/
 
 /********************************************************
@@ -739,8 +739,7 @@ function getNextGames(aGames, oTeamData) {
  */
 async function fetchScheduleData(oTeamData) {
     const sMyTeam = oTeamData[MY_NBA_TEAM].simpleName.toLowerCase();
-    const sCurrentSeasonStartYear = CURRENT_SEASON_START_YEAR;
-    const sUrl = `https://data.nba.com/data/v2015/json/mobile_teams/nba/${sCurrentSeasonStartYear}/teams/${sMyTeam}_schedule.json`;
+    const sUrl = `https://data.nba.com/data/v2015/json/mobile_teams/nba/${CURRENT_SEASON_START_YEAR}/teams/${sMyTeam}_schedule.json`;
     const oRequest = new Request(sUrl);
     const oResponse = await oRequest.loadJSON();
 
@@ -789,12 +788,21 @@ async function fetchStandings(oTeamData) {
     const sUrl = `https://global.nba.com/statsm2/team/standing.json?locale=en&teamCode=${oTeamData.shortName}`;
     const oRequest = new Request(sUrl);
     const oResponse = await oRequest.loadJSON();
-    return {
-        win: oResponse.payload.team.standings.wins,
-        loss: oResponse.payload.team.standings.losses,
-        confRank: oResponse.payload.team.standings.confRank,
-        divRank: oResponse.payload.team.standings.divRank,
-    };
+    if(oResponse?.payload?.team) {
+        return {
+            win: oResponse?.payload.team?.standings.wins,
+            loss: oResponse?.payload.team?.standings.losses,
+            confRank: oResponse?.payload.team?.standings.confRank,
+            divRank: oResponse?.payload.team?.standings.divRank,
+        };
+    } else {
+        return {
+            win: "-",
+            loss: "-",
+            confRank: "-",
+            divRank: "-",
+        }
+    }
 }
 
 /**
@@ -804,7 +812,6 @@ async function fetchStandings(oTeamData) {
  * @return {Object}
  */
 async function fetchTopScorer(oTeamData) {
-    const sCurrentSeasonStartYear = CURRENT_SEASON_START_YEAR;
     const sUrl = `http://global.nba.com/statsm2/team/leader.json?locale=en&teamCode=${oTeamData.shortName}`;
     const oRequest = new Request(sUrl);
     const oTopScorers = await oRequest.loadJSON();
@@ -813,16 +820,10 @@ async function fetchTopScorer(oTeamData) {
         name: null,
         value: "",
     };
-    if (oTopScorers) {
-								   
-        const oTopScorer = oTopScorers.payload.pointLeader.players[0];
-												 
-											  
-													 
-				
-	  
-        oResult.name = oTopScorer.profile.displayName;
-        oResult.value = oTopScorer.value;
+    if (oTopScorers) {			   
+        const oTopScorer = oTopScorers.payload.pointLeader?.players[0];
+        oResult.name = oTopScorer?.profile.displayName ?? null;
+        oResult.value = oTopScorer?.value ?? null;
     }
 
     return oResult;
