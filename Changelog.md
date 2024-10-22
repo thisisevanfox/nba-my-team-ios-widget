@@ -1,4 +1,8 @@
 # Changelog 
+## v1.8.1
+### Bugfixes:
+- Added null checks to ensure the script doesn't fail if the season hasn't started yet
+
 ## v1.8.0
 ### Adjustments:
 - Prepared script for new season
