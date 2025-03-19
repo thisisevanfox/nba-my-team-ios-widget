@@ -971,7 +971,7 @@ function getTeamData() {
             shortName: "hawks",
             location: "Atlanta",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/cfcn1w1503741986.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/cfcn1w1503741986.png/preview",
         },
         BOS: {
             id: 1610612738,
@@ -981,7 +981,7 @@ function getTeamData() {
             shortName: "celtics",
             location: "Boston",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/051sjd1537102179.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/051sjd1537102179.png/preview",
         },
         BKN: {
             id: 1610612751,
@@ -991,7 +991,7 @@ function getTeamData() {
             shortName: "nets",
             location: "Brooklyn",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/h0dwny1600552068.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/h0dwny1600552068.png/preview",
         },
         CHA: {
             id: 1610612766,
@@ -1001,7 +1001,7 @@ function getTeamData() {
             shortName: "hornets",
             location: "Charlotte",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/xqtvvp1422380623.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/xqtvvp1422380623.png/preview",
         },
         CHI: {
             id: 1610612741,
@@ -1011,7 +1011,7 @@ function getTeamData() {
             shortName: "bulls",
             location: "Chicago",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/yk7swg1547214677.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/yk7swg1547214677.png/preview",
         },
         CLE: {
             id: 1610612739,
@@ -1021,7 +1021,7 @@ function getTeamData() {
             shortName: "cavaliers",
             location: "Cleveland",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/a2pp4c1503741152.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/a2pp4c1503741152.png/preview",
         },
         DAL: {
             id: 1610612742,
@@ -1031,7 +1031,7 @@ function getTeamData() {
             shortName: "mavericks",
             location: "Dallas",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/yqrxrs1420568796.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/yqrxrs1420568796.png/preview",
         },
         DEN: {
             id: 1610612743,
@@ -1041,7 +1041,7 @@ function getTeamData() {
             shortName: "nuggets",
             location: "Denver",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/8o8j5k1546016274.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/8o8j5k1546016274.png/preview",
         },
         DET: {
             id: 1610612765,
@@ -1051,7 +1051,7 @@ function getTeamData() {
             shortName: "pistons",
             location: "Detroit",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/12612u1511101660.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/12612u1511101660.png/preview",
         },
         GSW: {
             id: 1610612744,
@@ -1061,7 +1061,7 @@ function getTeamData() {
             shortName: "warriors",
             location: "Golden State",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/irobi61565197527.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/irobi61565197527.png/preview",
         },
         HOU: {
             id: 1610612745,
@@ -1071,7 +1071,7 @@ function getTeamData() {
             shortName: "rockets",
             location: "Houston",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/yezpho1597486052.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/yezpho1597486052.png/preview",
         },
         IND: {
             id: 1610612754,
@@ -1081,7 +1081,7 @@ function getTeamData() {
             shortName: "pacers",
             location: "Indiana",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/v6jzgm1503741821.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/v6jzgm1503741821.png/preview",
         },
         LAC: {
             id: 1610612746,
@@ -1091,7 +1091,7 @@ function getTeamData() {
             shortName: "clippers",
             location: "Los Angeles",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/jv7tf21545916958.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/jv7tf21545916958.png/preview",
         },
         LAL: {
             id: 1610612747,
@@ -1101,7 +1101,7 @@ function getTeamData() {
             shortName: "lakers",
             location: "Los Angeles",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/44ubym1511102073.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/44ubym1511102073.png/preview",
         },
         MEM: {
             id: 1610612763,
@@ -1111,7 +1111,7 @@ function getTeamData() {
             shortName: "grizzlies",
             location: "Memphis",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/m64v461565196789.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/m64v461565196789.png/preview",
         },
         MIA: {
             id: 1610612748,
@@ -1121,7 +1121,7 @@ function getTeamData() {
             shortName: "heat",
             location: "Miami",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/5v67x51547214763.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/5v67x51547214763.png/preview",
         },
         MIL: {
             id: 1610612749,
@@ -1131,7 +1131,7 @@ function getTeamData() {
             shortName: "bucks",
             location: "Milwaukee",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/qgyz6z1503742649.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/qgyz6z1503742649.png/preview",
         },
         MIN: {
             id: 1610612750,
@@ -1141,7 +1141,7 @@ function getTeamData() {
             shortName: "timberwolves",
             location: "Minnesota",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/b6a05s1503742837.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/b6a05s1503742837.png/preview",
         },
         NOP: {
             id: 1610612740,
@@ -1151,7 +1151,7 @@ function getTeamData() {
             shortName: "pelicans",
             location: "New Orleans",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/f341s31523700397.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/f341s31523700397.png/preview",
         },
         NYK: {
             id: 1610612752,
@@ -1161,7 +1161,7 @@ function getTeamData() {
             shortName: "knicks",
             location: "New York",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/wyhpuf1511810435.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/wyhpuf1511810435.png/preview",
         },
         OKC: {
             id: 1610612760,
@@ -1171,7 +1171,7 @@ function getTeamData() {
             shortName: "thunder",
             location: "Oklahoma City",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/xpswpq1422575434.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/xpswpq1422575434.png/preview",
         },
         ORL: {
             id: 1610612753,
@@ -1181,7 +1181,7 @@ function getTeamData() {
             shortName: "magic",
             location: "Orlando",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/txuyrr1422492990.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/txuyrr1422492990.png/preview",
         },
         PHI: {
             id: 1610612755,
@@ -1191,7 +1191,7 @@ function getTeamData() {
             shortName: "76ers",
             location: "Philadelphia",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/71545f1518464849.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/71545f1518464849.png/preview",
         },
         PHX: {
             id: 1610612756,
@@ -1201,7 +1201,7 @@ function getTeamData() {
             shortName: "suns",
             location: "Phoenix",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/qrtuxq1422919040.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/qrtuxq1422919040.png/preview",
         },
         POR: {
             id: 1610612757,
@@ -1211,7 +1211,7 @@ function getTeamData() {
             shortName: "blazers",
             location: "Portland",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/mbtzin1520794112.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/mbtzin1520794112.png/preview",
         },
         SAC: {
             id: 1610612758,
@@ -1221,7 +1221,7 @@ function getTeamData() {
             shortName: "kings",
             location: "Sacramento",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/nf6jii1511465735.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/nf6jii1511465735.png/preview",
         },
         SAS: {
             id: 1610612759,
@@ -1231,7 +1231,7 @@ function getTeamData() {
             shortName: "spurs",
             location: "San Antonio",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/crit1q1511809636.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/crit1q1511809636.png/preview",
         },
         TOR: {
             id: 1610612761,
@@ -1241,7 +1241,7 @@ function getTeamData() {
             shortName: "raptors",
             location: "Toronto",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/gitpi61503743151.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/gitpi61503743151.png/preview",
         },
         UTA: {
             id: 1610612762,
@@ -1251,7 +1251,7 @@ function getTeamData() {
             shortName: "jazz",
             location: "Utah",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/9p1e5j1572041084.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/9p1e5j1572041084.png/preview",
         },
         WAS: {
             id: 1610612764,
@@ -1261,7 +1261,7 @@ function getTeamData() {
             shortName: "wizards",
             location: "Washington",
             logo:
-            "https://www.thesportsdb.com/images/media/team/badge/m2qhln1503743635.png/preview",
+            "https://r2.thesportsdb.com/images/media/team/badge/m2qhln1503743635.png/preview",
         },
     };
 }
