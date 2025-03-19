@@ -1,4 +1,11 @@
 # Changelog 
+## v1.9.0
+### Features:
+- Offline support (thanks to @EtienneMD)
+
+### Bugfixes:
+- Fixed URLs of logos
+
 ## v1.8.1
 ### Bugfixes:
 - Added null checks to ensure the script doesn't fail if the season hasn't started yet
