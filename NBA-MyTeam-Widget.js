@@ -600,67 +600,88 @@ async function prepareData() {
         },
     };
 
-    const oTeamData = getTeamData();
-    let aScheduleData = await fetchScheduleData(oTeamData);
+    try {
+        const oTeamData = getTeamData();
+        let aScheduleData = await fetchScheduleData(oTeamData);
 
-    if (aScheduleData && aScheduleData.length > 0) {
-        const oNextGame = aScheduleData[0];
-												 
+        if (aScheduleData && aScheduleData.length > 0) {
+            const oNextGame = aScheduleData[0];
+        
 
-        if (oNextGame != undefined) {
-													  
-            const oHomeTeam = filterTeamDataById(oNextGame.h.tid, oTeamData);
-            const oHomeTeamStandings = await fetchStandings(oHomeTeam);
-									
-								
-            const oHomeTeamTopScorer = await fetchTopScorer(oHomeTeam);
+            if (oNextGame != undefined) {
+            
+                const oHomeTeam = filterTeamDataById(oNextGame.h.tid, oTeamData);
+                const oHomeTeamStandings = await fetchStandings(oHomeTeam);
+            
+            
+                const oHomeTeamTopScorer = await fetchTopScorer(oHomeTeam);
 
-            const oAwayTeam = filterTeamDataById(oNextGame.v.tid, oTeamData);
-            const oAwayTeamStandings = await fetchStandings(oAwayTeam);
-									
-								
-            const oAwayTeamTopScorer = await fetchTopScorer(oAwayTeam);
+                const oAwayTeam = filterTeamDataById(oNextGame.v.tid, oTeamData);
+                const oAwayTeamStandings = await fetchStandings(oAwayTeam);
+            
+            
+                const oAwayTeamTopScorer = await fetchTopScorer(oAwayTeam);
 
-            oData.gameDate = oNextGame.utctm;
-            oData.venue = oHomeTeam.location;
-            oData.nextGames = getNextGames(aScheduleData, oTeamData);
-            oData.homeTeam.abbreviation = oHomeTeam.abbreviation;
-            oData.homeTeam.logoLink = oHomeTeam.logo;
-            oData.homeTeam.record = {
-                wins: oHomeTeamStandings.win,
-                losses: oHomeTeamStandings.loss,
-                confRank: oHomeTeamStandings.confRank,
-                divRank: oHomeTeamStandings.divRank,
-            };
-            oData.awayTeam.abbreviation = oAwayTeam.abbreviation;
-            oData.awayTeam.logoLink = oAwayTeam.logo;
-            oData.awayTeam.record = {
-                wins: oAwayTeamStandings.win,
-                losses: oAwayTeamStandings.loss,
-                confRank: oAwayTeamStandings.confRank,
-                divRank: oAwayTeamStandings.divRank,
-            };
-            if (oHomeTeamTopScorer.name != null) {
-                oData.homeTeam.topscorer.name = oHomeTeamTopScorer.name;
-                oData.homeTeam.topscorer.value = oHomeTeamTopScorer.value;
+                oData.gameDate = oNextGame.utctm;
+                oData.venue = oHomeTeam.location;
+                oData.nextGames = getNextGames(aScheduleData, oTeamData);
+                oData.homeTeam.abbreviation = oHomeTeam.abbreviation;
+                oData.homeTeam.logoLink = oHomeTeam.logo;
+                oData.homeTeam.record = {
+                    wins: oHomeTeamStandings.win,
+                    losses: oHomeTeamStandings.loss,
+                    confRank: oHomeTeamStandings.confRank,
+                    divRank: oHomeTeamStandings.divRank,
+                };
+                oData.awayTeam.abbreviation = oAwayTeam.abbreviation;
+                oData.awayTeam.logoLink = oAwayTeam.logo;
+                oData.awayTeam.record = {
+                    wins: oAwayTeamStandings.win,
+                    losses: oAwayTeamStandings.loss,
+                    confRank: oAwayTeamStandings.confRank,
+                    divRank: oAwayTeamStandings.divRank,
+                };
+                if (oHomeTeamTopScorer.name != null) {
+                    oData.homeTeam.topscorer.name = oHomeTeamTopScorer.name;
+                    oData.homeTeam.topscorer.value = oHomeTeamTopScorer.value;
+                }
+                if (oAwayTeamTopScorer.name != null) {
+                    oData.awayTeam.topscorer.name = oAwayTeamTopScorer.name;
+                    oData.awayTeam.topscorer.value = oAwayTeamTopScorer.value;
+                }
+
+                if (SHOW_LIVE_SCORES) {
+                    const oLiveData = await fetchLiveData(oNextGame.gid, oNextGame.etm);
+                    oData.homeTeam.liveScore = oLiveData.homeTeamScore;
+                    oData.awayTeam.liveScore = oLiveData.awayTeamScore;
+                    oData.gameStatus = oLiveData.statusText;
+                }
             }
-            if (oAwayTeamTopScorer.name != null) {
-                oData.awayTeam.topscorer.name = oAwayTeamTopScorer.name;
-                oData.awayTeam.topscorer.value = oAwayTeamTopScorer.value;
-            }
-
-            if (SHOW_LIVE_SCORES) {
-                const oLiveData = await fetchLiveData(oNextGame.gid, oNextGame.etm);
-                oData.homeTeam.liveScore = oLiveData.homeTeamScore;
-                oData.awayTeam.liveScore = oLiveData.awayTeamScore;
-                oData.gameStatus = oLiveData.statusText;
-            }
+        } else {
+            return null;
         }
-    } else {
-        return null;
-    }
 
-    return oData;
+        // Set up the file manager.
+        const oFiles = FileManager.local();
+    
+        // Set up cache
+        const sCachePath = oFiles.joinPath(oFiles.cacheDirectory(), 'nba_data.json');
+
+        // Save data for later use.
+        oFiles.writeString(sCachePath, JSON.stringify(oData))
+
+        return oData;
+    } catch (e) {
+        // Set up the file manager.
+        const oFiles = FileManager.local();
+
+        // Set up cache
+        const sCachePath = oFiles.joinPath(oFiles.cacheDirectory(), 'nba_data.json');
+
+        // Read previously stored data.
+        const oStoredData = oFiles.readString(sCachePath);
+        return JSON.parse(oStoredData);
+    }
 }
 
 /**
