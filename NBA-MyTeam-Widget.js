@@ -4,12 +4,12 @@
 
 /********************************************************
  * script     : NBA-MyTeam-Widget.js
- * version    : 1.8.1
+ * version    : 1.9.0
  * description: Widget for Scriptable.app, which shows
  *              the next games for your NBA team
  * author     : @thisisevanfox
  * support    : https://git.io/JtLOD
- * date       : 2024-10-22
+ * date       : 2025-03-19
  *******************************************************/
 
 /********************************************************
